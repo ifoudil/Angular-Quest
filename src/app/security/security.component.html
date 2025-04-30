@@ -1,0 +1,28 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="Password">
+                <label for="Password">Password</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" placeholder="Confirm">
+                <label for="Confirm">Confirm Password</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="Recovery">
+                <label for="Recovery">Recovery Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" placeholder="Recovery">
+                <label for="Recovery">Recovery Phone</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-between flex-row mb-5 mt-4">
+    <app-button-back [stepper]="stepper" [stepperCdk]="stepperCdk"></app-button-back>
+    <app-button-next [stepper]="stepper" [stepperCdk]="stepperCdk"></app-button-next>
+</div>

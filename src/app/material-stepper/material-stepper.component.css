@@ -1,0 +1,28 @@
+h2 {
+    margin: 30px;
+    color: #dbc1fc;
+    text-align: center;
+}
+
+::ng-deep .mat-stepper-horizontal {
+    background: rgba(0, 0, 0, 0.411) !important;
+    box-shadow: none !important;
+}
+  
+::ng-deep .mat-horizontal-stepper-header-container {
+    background: transparent !important;
+}
+  
+::ng-deep .mat-horizontal-content-container {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+::ng-deep .mat-step-label {
+    color: #fff !important;
+    font-weight: bold; 
+    font-size: 18px;
+}
+
+
+

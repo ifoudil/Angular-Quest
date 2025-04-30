@@ -1,0 +1,23 @@
+<div class="guard-page">
+    <h2 class="section-title">Guard Test</h2>
+  
+    <form (submit)="onMultiply($event)">
+      <div>
+        <label for="a">Value a</label>
+        <input id="a" type="number" #inputA />
+      </div>
+  
+      <div>
+        <label for="b">Value b</label>
+        <input id="b" type="number" #inputB />
+      </div>
+  
+      <button type="submit">Multiply</button>
+    </form>
+  
+    <div>
+      <label for="result">Result</label>
+      <input id="result" type="text" readonly />
+    </div>
+</div>
+  

@@ -1,0 +1,31 @@
+
+.header{
+	width: 1200px;
+	height: auto;
+	margin: auto;
+	color: #fff;
+	position: relative;
+}
+
+.header .site-slogan .paragraphe-home-page{
+	padding-left: 20px;
+	padding-bottom: 25px;
+	font-family: Arial;
+	letter-spacing: 1.2px;
+	line-height: 30px;
+}
+
+.header .site-slogan h1{
+	font-family: 'Times New Roman';
+	font-size: 50px;
+	padding-left: 20px;
+	margin-top: 9%;
+	letter-spacing: 2px;
+}
+
+.header .site-slogan span{
+	color: #dbc1fc;
+	font-size: 60px;
+	text-shadow: 1px 1px 2px grey; 
+}
+

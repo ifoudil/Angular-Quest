@@ -1,0 +1,19 @@
+.fa {
+    color: #a02b59;
+}
+p {
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    color: #dbc1fc;
+    border: 2px solid #dbc1fc;
+}
+
+button:hover{
+    background-color: #dbc1fc;
+    color: #fff;
+    border: 2px solid #dbc1fc;
+}
+

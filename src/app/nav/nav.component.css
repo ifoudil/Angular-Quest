@@ -1,0 +1,70 @@
+.navbar{
+	width: 100%;
+	max-width: 950px;
+	height: 75px;
+	margin: auto;
+}
+
+.icon{
+	width: 250px; 
+	float: left;
+	height: 50px;
+}
+
+.logo {
+    color: #a02b59;
+    font-size: 25px;
+    font-family: Arial;
+    padding-left: 0px;
+    float: left;
+    padding-top: 25px; 
+}
+
+.menu{
+	width: 600px; 
+	float: left;
+	height: 70px;
+}
+
+.ul-menu{
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ul-menu li{
+	list-style: none;
+	margin-right: 48px; 
+	margin-top: 27px;
+	font-size: 14px;
+}
+
+.ul-menu li button{
+    background: none;
+    border: none;
+	text-decoration: none;
+	color: #fff;
+	font-family: Arial;
+	font-weight: bold;
+	transition: 0.3s ease-in-out;
+	display: inline-block;
+	white-space: nowrap;
+    width: auto;
+}
+
+.ul-menu li button:hover{
+	color: #a02b59;
+}
+
+.valign-center {
+    display: inline-flex;
+    align-items: center;
+}
+
+button.menu-button.mat-button, button.menu-button.mat-mdc-button {
+  color: white !important;
+}
+button.menu-button.mat-button:hover, button.menu-button.mat-mdc-button:hover {
+  color: #a02b59 !important;
+}

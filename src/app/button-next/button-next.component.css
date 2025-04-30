@@ -1,0 +1,12 @@
+button {
+    background-color: transparent;
+    color: #a02b59;
+    border: 2px solid #a02b59;
+}
+
+button:hover{
+    background-color: #a02b59;
+    color: #fff;
+    border: 2px solid #a02b59;
+}
+

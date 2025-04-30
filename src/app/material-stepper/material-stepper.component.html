@@ -1,0 +1,15 @@
+<h2>This is my first material stepper</h2>
+<mat-stepper #stepper>
+    <mat-step label="Information">
+        <app-information [stepper]="stepper"></app-information>
+    </mat-step>
+    <mat-step label="Contact">
+        <app-contact-info [stepper]="stepper"></app-contact-info>
+    </mat-step>
+    <mat-step label="Security">
+        <app-security [stepper]="stepper"></app-security>
+    </mat-step>
+    <mat-step label="Finish">
+        <app-finish></app-finish>
+    </mat-step>
+</mat-stepper>

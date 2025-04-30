@@ -1,0 +1,45 @@
+<div class="navbar">
+    <div class="icon">
+        <h2 class="logo">Chromatic-Requiem</h2>
+    </div>
+    <div class="menu">
+        <ul class="ul-menu">
+            <!-- <li><button routerLink="/home">HOME</button></li> -->
+            <li><button routerLink="/testGuard">RESULT</button></li>
+            <li><button routerLink="/about">ABOUT</button></li>
+            <li><button routerLink="/users">USERS</button></li>
+            <li>
+                <button mat-button [matMenuTriggerFor]="CONFIG" class="menu-button">
+                  <span class="valign-center">
+                    CONFIG
+                    <i class="material-icons">arrow_drop_down</i>
+                  </span>
+                </button>
+            </li>
+            <li><button routerLink="/contact">CONTACT</button></li>
+            <li>
+                <button mat-button [matMenuTriggerFor]="STEPPER" class="menu-button">
+                    <span class="valign-center">
+                        STEPPER
+                        <i class="material-icons">arrow_drop_down</i>
+                      </span>
+                </button>
+            </li>
+            <li><button routerLink="/guard">GUARD</button></li>
+        </ul>
+    </div>
+</div>
+
+<mat-menu #CONFIG="matMenu">
+    <button routerLink="/configX" mat-menu-item>XConfig</button>
+    <button routerLink="/configY" mat-menu-item>YConfig</button>
+</mat-menu>
+
+<mat-menu #STEPPER="matMenu">
+    <button routerLink="/cdkstepper" mat-menu-item>Cdk Stepper</button>
+    <button routerLink="/materialstepper" mat-menu-item>Material Stepper</button>
+</mat-menu>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

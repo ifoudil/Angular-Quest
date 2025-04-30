@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <h2 class="text-center mt-4">Angular First Stepper</h2>
+        <div class="col-md-9 mx-auto">
+            <app-stepper [linearModeSelected]="false" cdkStepperOrientation="horizontal" #appStepper>
+                <cdk-step [label]="'Information'">
+                    <app-information [stepperCdk]="stepperCdk"></app-information>
+                </cdk-step>
+                <cdk-step [label]="'Contact'">
+                    <app-contact-info [stepperCdk]="stepperCdk"></app-contact-info>
+                </cdk-step>
+                <cdk-step [label]="'Security'">
+                    <app-security [stepperCdk]="stepperCdk"></app-security>
+                </cdk-step>
+                <cdk-step [label]="'Finish'">
+                    <app-finish></app-finish>
+                </cdk-step>
+            </app-stepper>
+        </div>
+    </div>
+</div>
