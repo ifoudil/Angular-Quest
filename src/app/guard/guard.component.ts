@@ -1,14 +1,22 @@
 import { Component, ViewChild, ElementRef, AfterViewInit  } from '@angular/core';
+import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-guard',
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './guard.component.html',
-  styleUrl: './guard.component.css'
+  styleUrl: './guard.component.css',
 })
 export class GuardComponent implements AfterViewInit{
   @ViewChild('inputA') inputA!: ElementRef<HTMLInputElement>;
   @ViewChild('inputB') inputB!: ElementRef<HTMLInputElement>;
+  // storedA!:number;
+  // storedB!:number;
+  // somme!:number;
+
+  storedA:FormControl = new FormControl("", Validators.required);
+  storedB:FormControl = new FormControl("", Validators.required);
+  somme:FormControl = new FormControl(""); 
 
   ngAfterViewInit(): void {
     // if there's some value in localStorage, recovered them
@@ -16,29 +24,24 @@ export class GuardComponent implements AfterViewInit{
     let storedB = localStorage.getItem('b');
     let storedResult = localStorage.getItem('result');
 
-    if (storedA) this.inputA.nativeElement.value = storedA;
-    if (storedB) this.inputB.nativeElement.value = storedB;
+    if (storedA) this.storedA.setValue(+storedA);
+    if (storedB) this.storedB.setValue(+storedB);
 
-    let resultInput = document.getElementById('result') as HTMLInputElement;
-    if (resultInput && storedResult) {
-      resultInput.value = storedResult;
-    }
+    this.somme.setValue(storedResult?+storedResult:0);
   }
 
-  onMultiply(event: Event): void {
-    event.preventDefault(); // Prevents to reload page
+  onMultiply(): void {
+    //event.preventDefault(); // Prevents to reload page
 
-    let a = parseFloat(this.inputA.nativeElement.value);
-    let b = parseFloat(this.inputB.nativeElement.value);
-    let result = a * b;
+    let a = this.storedA.value;
+    let b = this.storedB.value;
+    this.somme.setValue(a * b);
+    console.log(a + b)
 
-    // Display result in #result input
-    let resultInput = document.getElementById('result') as HTMLInputElement;
-    resultInput.value = isNaN(result) ? ' ' : result.toString();
-
-    // local storage of values
-    localStorage.setItem('a', this.inputA.nativeElement.value);
-    localStorage.setItem('b', this.inputB.nativeElement.value);
-    localStorage.setItem('result', result.toString());
+    //FormControl et NgModel == echanger données entre html et ts
+    // local storage of values : attend un toString
+    localStorage.setItem('a', a.toString());
+    localStorage.setItem('b', b.toString());
+    localStorage.setItem('result', this.somme.value.toString());
   }
 }

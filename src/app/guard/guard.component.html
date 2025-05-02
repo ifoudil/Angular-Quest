@@ -1,15 +1,17 @@
 <div class="guard-page">
     <h2 class="section-title">Guard Test</h2>
   
-    <form (submit)="onMultiply($event)">
+    <form (submit)="onMultiply()">
       <div>
         <label for="a">Value a</label>
-        <input id="a" type="number" #inputA />
+        <!-- <input id="a" type="number" #inputA [(ngModel)]="storedA" name="a"/> -->
+        <input id="a" type="number" #inputA [formControl]="storedA"/>
       </div>
   
       <div>
         <label for="b">Value b</label>
-        <input id="b" type="number" #inputB />
+        <!-- <input id="b" type="number" #inputB [(ngModel)]="storedB" name="b"/> -->
+        <input id="b" type="number" #inputA [formControl]="storedB"/>
       </div>
   
       <button type="submit">Multiply</button>
@@ -17,7 +19,8 @@
   
     <div>
       <label for="result">Result</label>
-      <input id="result" type="text" readonly />
+      <!-- <input id="result" type="text" readonly [(ngModel)]="somme" name="result"/> -->
+      <input id="result" type="number" #inputA [formControl]="somme"/>
     </div>
 </div>
   
