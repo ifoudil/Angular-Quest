@@ -10,9 +10,9 @@ import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angu
 export class GuardComponent implements AfterViewInit{
   @ViewChild('inputA') inputA!: ElementRef<HTMLInputElement>;
   @ViewChild('inputB') inputB!: ElementRef<HTMLInputElement>;
-  // storedA!:number;
-  // storedB!:number;
-  // somme!:number;
+  // storedA!:number; pour ngModel
+  // storedB!:number; pour NgModel
+  // somme!:number; pour ngModel
 
   storedA:FormControl = new FormControl("", Validators.required);
   storedB:FormControl = new FormControl("", Validators.required);
@@ -32,14 +32,13 @@ export class GuardComponent implements AfterViewInit{
 
   onMultiply(): void {
     //event.preventDefault(); // Prevents to reload page
-
     let a = this.storedA.value;
     let b = this.storedB.value;
     this.somme.setValue(a * b);
     console.log(a + b)
 
-    //FormControl et NgModel == echanger données entre html et ts
-    // local storage of values : attend un toString
+    //FormControl et NgModel == exchange data between html and ts
+    // local storage of values : attend toString
     localStorage.setItem('a', a.toString());
     localStorage.setItem('b', b.toString());
     localStorage.setItem('result', this.somme.value.toString());
